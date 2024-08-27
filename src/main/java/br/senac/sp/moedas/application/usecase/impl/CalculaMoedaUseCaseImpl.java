@@ -3,7 +3,7 @@ package br.senac.sp.moedas.application.usecase.impl;
 import br.senac.sp.moedas.application.dto.MoedaRequest;
 import br.senac.sp.moedas.application.usecase.CalculaMoedaUseCase;
 import br.senac.sp.moedas.domain.entity.DollarEntity;
-import br.senac.sp.moedas.domain.entity.PesoArgentino;
+import br.senac.sp.moedas.domain.entity.PesoArgentinoEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,7 +16,7 @@ public class CalculaMoedaUseCaseImpl implements CalculaMoedaUseCase {
                 return new DollarEntity(request.getValorReais())
                         .converterMoedaParaDollarAmericano();
             case "PESO":
-                return new PesoArgentino(request.getValorReais())
+                return new PesoArgentinoEntity(request.getValorReais())
                         .converterMoedaParaPesoArgentino();
             default:
                 throw new RuntimeException("Nao foi localizado o tipo de moeda");

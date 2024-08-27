@@ -2,11 +2,11 @@ package br.senac.sp.moedas.domain.entity;
 
 import java.util.Objects;
 
-public class PesoArgentino {
+public class PesoArgentinoEntity {
 
     private Double moedaReais;
 
-    public PesoArgentino(Double moedaReais){
+    public PesoArgentinoEntity(Double moedaReais){
         this.moedaReais = moedaReais;
     }
 
@@ -18,7 +18,7 @@ public class PesoArgentino {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PesoArgentino that = (PesoArgentino) o;
+        PesoArgentinoEntity that = (PesoArgentinoEntity) o;
         return Objects.equals(moedaReais, that.moedaReais);
     }
 
